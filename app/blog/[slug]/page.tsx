@@ -677,22 +677,30 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <p>{post.excerpt}</p>
-      {/* <img src={post.image || "/placeholder.svg"} alt={post.title} /> */}
-      <Image
-  src={post.image || "/placeholder.svg"}
-  alt={post.title}
-  width={800}
-  height={400}
-  style={{ objectFit: 'cover' }}
-/>
-      <p>Category: {post.category}</p>
-      <p>Author: {post.author}</p>
-      <p>Date: {post.date}</p>
-      <p>Read Time: {post.readTime}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+    <div className="max-w-4xl mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
+      <p className="text-lg text-gray-600 mb-4">{post.excerpt}</p>
+      
+      <div className="relative w-full h-64 mb-6">
+        <Image
+          src={post.image || "/placeholder.svg"}
+          alt={post.title}
+          fill
+          className="object-cover rounded-lg"
+        />
+      </div>
+      
+      <div className="flex gap-4 text-sm text-gray-500 mb-6">
+        <span>Category: {post.category}</span>
+        <span>Author: {post.author}</span>
+        <span>Date: {post.date}</span>
+        <span>Read Time: {post.readTime}</span>
+      </div>
+      
+      <div 
+        className="prose max-w-none" 
+        dangerouslySetInnerHTML={{ __html: post.content }} 
+      />
     </div>
   )
 }
