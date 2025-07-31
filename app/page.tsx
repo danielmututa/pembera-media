@@ -52,16 +52,16 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              {/* <Image
+              <Image
                 src="/Professional-printing-and-design-work.jpg?height=400&width=500"
                 alt="Professional printing and design work"
                 width={500}
                 height={300}
-                className="rounded-2xl shadow-2xl"
-              /> */}
-              <img 
+                className="rounded-2xl shadow-2xl object-cover h-[450px]"
+              />
+              {/* <img 
                className="rounded-2xl shadow-2xl h-[450px] object-cover w-full" src="/Professional-printing-and-design-work.jpg" alt="Professional printing and design work"
-                />
+                /> */}
             </div>
           </div>
         </div>
@@ -208,7 +208,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Us?</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We're committed to delivering exceptional quality and service that exceeds your expectations
+              We are committed to delivering exceptional quality and service that exceeds your expectations
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -251,7 +251,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Ready to Start Your Project?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Get in touch with us today for a free consultation and quote. Let's bring your ideas to life!
+            Get in touch with us today for a free consultation and quote. Let us bring your ideas to life!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
