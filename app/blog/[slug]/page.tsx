@@ -708,110 +708,110 @@
 
 
 
-import Image from "next/image";
-import { notFound } from 'next/navigation';
+// import Image from "next/image";
+// import { notFound } from 'next/navigation';
 
-type BlogPost = {
-  title: string;
-  excerpt: string;
-  image: string;
-  category: string;
-  author: string;
-  date: string;
-  readTime: string;
-  content: string;
-};
+// type BlogPost = {
+//   title: string;
+//   excerpt: string;
+//   image: string;
+//   category: string;
+//   author: string;
+//   date: string;
+//   readTime: string;
+//   content: string;
+// };
 
-type BlogPosts = {
-  [key: string]: BlogPost;
-};
+// type BlogPosts = {
+//   [key: string]: BlogPost;
+// };
 
-const blogPosts: BlogPosts = {
-  "example-post": {
-    title: "Example Blog Post",
-    excerpt: "This is an example blog post excerpt.",
-    image: "/placeholder.svg?height=400&width=800&text=Example+Post",
-    category: "Example Category",
-    author: "Example Author",
-    date: "January 1, 2024",
-    readTime: "5 min read",
-    content: "<p>This is the content of the example blog post.</p>",
-  },
-  "tshirt-printing-methods": {
-    title: "The Ultimate Guide to T-Shirt Printing Methods",
-    excerpt: "Compare screen printing, heat transfer, and embroidery to choose the best method for your project.",
-    image: "/placeholder.svg?height=400&width=800&text=T-Shirt+Printing+Methods",
-    category: "Printing Guide",
-    author: "Production Team",
-    date: "February 28, 2024",
-    readTime: "8 min read",
-    content: `
-      <p>Choosing the right printing method for your t-shirts can make the difference between a professional-looking product and a disappointing result. Each printing technique has its own advantages, limitations, and ideal use cases. This comprehensive guide will help you understand the most popular t-shirt printing methods and when to use each one.</p>
-      <!-- Rest of your content -->
-    `,
-  },
-  "color-psychology": {
-    title: "Color Psychology in Marketing Materials",
-    excerpt: "How different colors affect customer behavior and how to use color psychology in your designs.",
-    image: "/placeholder.svg?height=400&width=800&text=Color+Psychology+Guide",
-    category: "Design Tips",
-    author: "Design Team",
-    date: "February 20, 2024",
-    readTime: "4 min read",
-    content: `
-      <p>Color is one of the most powerful tools in a designer's arsenal. It can evoke emotions, influence decisions, and even affect purchasing behavior. Understanding color psychology can help you create more effective marketing materials that resonate with your audience and drive results.</p>
-      <!-- Rest of your content -->
-    `,
-  },
-  "file-preparation": {
-    title: "Preparing Files for Professional Printing",
-    excerpt: "Essential tips for preparing your design files to ensure the best possible print quality.",
-    image: "/placeholder.svg?height=400&width=800&text=File+Preparation+Guide",
-    category: "Technical",
-    author: "Print Expert",
-    date: "February 15, 2024",
-    readTime: "6 min read",
-    content: `
-      <p>Proper file preparation is crucial for achieving professional print results. Even the most beautiful design can look disappointing if the files aren't prepared correctly. This guide will walk you through the essential steps to prepare your files for printing, ensuring your final products look exactly as intended.</p>
-      <!-- Rest of your content -->
-    `,
-  },
-};
+// const blogPosts: BlogPosts = {
+//   "example-post": {
+//     title: "Example Blog Post",
+//     excerpt: "This is an example blog post excerpt.",
+//     image: "/placeholder.svg?height=400&width=800&text=Example+Post",
+//     category: "Example Category",
+//     author: "Example Author",
+//     date: "January 1, 2024",
+//     readTime: "5 min read",
+//     content: "<p>This is the content of the example blog post.</p>",
+//   },
+//   "tshirt-printing-methods": {
+//     title: "The Ultimate Guide to T-Shirt Printing Methods",
+//     excerpt: "Compare screen printing, heat transfer, and embroidery to choose the best method for your project.",
+//     image: "/placeholder.svg?height=400&width=800&text=T-Shirt+Printing+Methods",
+//     category: "Printing Guide",
+//     author: "Production Team",
+//     date: "February 28, 2024",
+//     readTime: "8 min read",
+//     content: `
+//       <p>Choosing the right printing method for your t-shirts can make the difference between a professional-looking product and a disappointing result. Each printing technique has its own advantages, limitations, and ideal use cases. This comprehensive guide will help you understand the most popular t-shirt printing methods and when to use each one.</p>
+//       <!-- Rest of your content -->
+//     `,
+//   },
+//   "color-psychology": {
+//     title: "Color Psychology in Marketing Materials",
+//     excerpt: "How different colors affect customer behavior and how to use color psychology in your designs.",
+//     image: "/placeholder.svg?height=400&width=800&text=Color+Psychology+Guide",
+//     category: "Design Tips",
+//     author: "Design Team",
+//     date: "February 20, 2024",
+//     readTime: "4 min read",
+//     content: `
+//       <p>Color is one of the most powerful tools in a designer's arsenal. It can evoke emotions, influence decisions, and even affect purchasing behavior. Understanding color psychology can help you create more effective marketing materials that resonate with your audience and drive results.</p>
+//       <!-- Rest of your content -->
+//     `,
+//   },
+//   "file-preparation": {
+//     title: "Preparing Files for Professional Printing",
+//     excerpt: "Essential tips for preparing your design files to ensure the best possible print quality.",
+//     image: "/placeholder.svg?height=400&width=800&text=File+Preparation+Guide",
+//     category: "Technical",
+//     author: "Print Expert",
+//     date: "February 15, 2024",
+//     readTime: "6 min read",
+//     content: `
+//       <p>Proper file preparation is crucial for achieving professional print results. Even the most beautiful design can look disappointing if the files aren't prepared correctly. This guide will walk you through the essential steps to prepare your files for printing, ensuring your final products look exactly as intended.</p>
+//       <!-- Rest of your content -->
+//     `,
+//   },
+// };
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-  const post = blogPosts[slug];
+// export default function BlogPostPage({ params }: { params: { slug: string } }) {
+//   const { slug } = params;
+//   const post = blogPosts[slug];
 
-  if (!post) {
-    notFound();
-  }
+//   if (!post) {
+//     notFound();
+//   }
 
-  return (
-    <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
-      <p className="text-lg text-gray-600 mb-4">{post.excerpt}</p>
+//   return (
+//     <div className="max-w-4xl mx-auto p-4">
+//       <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
+//       <p className="text-lg text-gray-600 mb-4">{post.excerpt}</p>
       
-      <div className="relative w-full h-64 mb-6">
-        <Image
-          src={post.image || "/placeholder.svg"}
-          alt={post.title}
-          fill
-          className="object-cover rounded-lg"
-          priority
-        />
-      </div>
+//       <div className="relative w-full h-64 mb-6">
+//         <Image
+//           src={post.image || "/placeholder.svg"}
+//           alt={post.title}
+//           fill
+//           className="object-cover rounded-lg"
+//           priority
+//         />
+//       </div>
       
-      <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-6">
-        <span>Category: {post.category}</span>
-        <span>Author: {post.author}</span>
-        <span>Date: {post.date}</span>
-        <span>Read Time: {post.readTime}</span>
-      </div>
+//       <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-6">
+//         <span>Category: {post.category}</span>
+//         <span>Author: {post.author}</span>
+//         <span>Date: {post.date}</span>
+//         <span>Read Time: {post.readTime}</span>
+//       </div>
       
-      <article 
-        className="prose max-w-none" 
-        dangerouslySetInnerHTML={{ __html: post.content }} 
-      />
-    </div>
-  );
-}
+//       <article 
+//         className="prose max-w-none" 
+//         dangerouslySetInnerHTML={{ __html: post.content }} 
+//       />
+//     </div>
+//   );
+// }
