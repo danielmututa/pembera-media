@@ -1,3 +1,4 @@
+import Image from "next/image"
 const blogPosts = {
   "example-post": {
     title: "Example Blog Post",
@@ -679,7 +680,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     <div>
       <h1>{post.title}</h1>
       <p>{post.excerpt}</p>
-      <img src={post.image || "/placeholder.svg"} alt={post.title} />
+      {/* <img src={post.image || "/placeholder.svg"} alt={post.title} /> */}
+      <Image
+  src={post.image || "/placeholder.svg"}
+  alt={post.title}
+  width={800}
+  height={400}
+  style={{ objectFit: 'cover' }}
+/>
       <p>Category: {post.category}</p>
       <p>Author: {post.author}</p>
       <p>Date: {post.date}</p>
