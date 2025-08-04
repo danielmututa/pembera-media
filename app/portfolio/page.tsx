@@ -251,7 +251,7 @@ export default function PortfolioPage() {
       name: "Premium Business Cards",
       price: 49.99,
       originalPrice: 69.99,
-      image: "/placeholder.svg?height=300&width=300&text=Business+Cards",
+      image: "/brandidentty.jpeg?height=300&width=300&text=Business+Cards",
       rating: 4.9,
       reviews: 156,
       badge: "Popular",
@@ -540,7 +540,7 @@ export default function PortfolioPage() {
           </div>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -559,15 +559,15 @@ export default function PortfolioPage() {
       </section>
 
       {/* Quick View Modal */}
-      <Dialog open={isQuickViewOpen} onOpenChange={setIsQuickViewOpen}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+      <Dialog open={isQuickViewOpen}  onOpenChange={setIsQuickViewOpen}>
+        <DialogContent className=" h-[95vh] w-full overflow-y-auto">
           {selectedProduct && (
             <>
               <DialogHeader>
                 <DialogTitle className="text-2xl font-bold">{selectedProduct.name}</DialogTitle>
               </DialogHeader>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8 mt-6">
                 {/* Product Image */}
                 <div className="relative">
                   <Image

@@ -24,7 +24,7 @@ export default function AboutPage() {
 
       {/* Main About Section */}
       <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
@@ -62,9 +62,9 @@ export default function AboutPage() {
                 alt="Cargo Ship"
                 width={600}
                 height={400}
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg w-full lg:w-[600px]"
               />
-              <div className="absolute -bottom-4 -right-4 bg-orange-500 text-white p-6 rounded-lg shadow-lg">
+              <div className="absolute -bottom-4 -right-0 bg-orange-500 text-white p-6 rounded-lg shadow-lg">
                 <div className="text-3xl font-bold">20+</div>
                 <div className="text-sm">Years of Experience</div>
               </div>
@@ -73,48 +73,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Services Features */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 bg-white hover:shadow-lg transition-shadow border-0 shadow-sm">
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
-                  <Truck className="h-8 w-8 text-orange-500" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">Delivery Performance</h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-8 bg-white hover:shadow-lg transition-shadow border-0 shadow-sm">
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
-                  <Globe className="h-8 w-8 text-orange-500" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">Reliability And Timeliness</h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-8 bg-white hover:shadow-lg transition-shadow border-0 shadow-sm">
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
-                  <Award className="h-8 w-8 text-orange-500" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">Comprehensive Services</h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+   
+    
 
       {/* Industry Competence Section */}
       <section className="py-20 px-4 bg-white">
@@ -126,7 +86,7 @@ export default function AboutPage() {
                 alt="Logistics Operations"
                 width={600}
                 height={500}
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg w-full lg:w-[600px]"
               />
             </div>
 
